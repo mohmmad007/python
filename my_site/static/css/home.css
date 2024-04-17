@@ -1,0 +1,405 @@
+.god{
+    background-color: #fcfcfb;
+    padding-top:30px ;
+}
+.video-home{
+    border-radius: 30px;
+    height: 324px;
+    width: 573px;
+
+}
+.parent_div{
+    margin: 0 50px;
+    border: 1px solid rgba(17, 17, 17, 0.2) ;
+    border-radius: 20px;
+    background-color: white;
+    height:100%;
+    padding: 30px 30px 140px ;
+    margin-bottom: 40px;
+}
+.first_child{
+    float: left;
+    width: 49%;
+    text-align: right;
+
+}
+.first{
+    overflow: hidden;
+}
+.first_child_text{
+padding-top: 59px;
+}
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #3498db;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 49%;
+}
+.button:hover {
+  background-color: #298088;
+  text-decoration: none;
+    color: white;
+
+}
+.button_about{
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      color: #f39c12;
+      border-radius: 5px;
+      border: 1px solid #f39c12;
+      cursor: pointer;
+      margin-top: 4rem;
+      background-color: white;
+    margin-right: 1.5rem;
+
+}
+.button_about:hover {
+      background-color: #f39c12;
+
+      text-decoration: none;
+      color: #fff;
+
+}
+#works{
+    text-align: center;
+    margin:7rem 0 ;
+}
+.works_child{
+    float: right;
+    width: 47%;
+    text-align: center;
+    background-color: #fcfcfb;
+    margin: 1rem;
+    padding: 2.5rem 7rem;
+    border: 1px solid #f39c12;
+    border-radius: 20px;
+    color: black;
+    height: 23rem;
+
+}
+.works_parent{
+    overflow: hidden;
+}
+
+h4{
+    padding:0 10px;
+}
+
+.g2-call {
+      background-color: #37474f;
+      border-radius: 16px;
+      position: relative;
+      padding: 34px 24px;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 32px;
+      overflow: hidden;
+      color: #fff !important;
+      font-weight: 500;
+      margin-bottom: 12px;
+      font-size: 20px;
+      text-align: right;
+
+}
+.button_Counseling{
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #f3aa12;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.button_Counseling:hover {
+    background-color: #f39c12;
+    text-decoration: none;
+    color: white;
+
+
+}
+.g2-call-suggestions{
+        border:1px solid  #B97912;
+        border-radius: 16px;
+        position: relative;
+        padding: 34px 24px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 32px;
+        color: #000 !important;
+        font-weight: 500;
+        margin-bottom: 12px;
+        font-size: 10px;
+        text-align: right;
+        width: 100%;
+        height: 60%;
+        float: right;
+}
+.button_Counseling_suggestions{
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #37474f;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+.suggestions_news{
+        overflow: hidden;
+
+}
+.g2-call-news{
+        border:1px solid #37474f;
+        border-radius: 16px;
+        position: relative;
+        padding: 34px 19px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 32px;
+        color: #37474f !important;
+        font-weight: 500;
+        margin-bottom: 12px;
+        font-size: 10px;
+        text-align: right;
+        width: 55%;
+        height: 6%;
+        float: right;
+        margin-left: 5%;
+
+}
+.button_Counseling_news{
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #37474f;
+    background-color: #37474f;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+.button_Counseling_news:hover,.button_Counseling_suggestions:hover{
+        background-color: #B97912;
+        text-decoration: none;
+        color: #fff;
+        /*border:1px solid #37474f;*/
+
+}
+.news{
+    color: #37474f;
+}
+.news:hover{
+    text-decoration: none;
+    color: #B97912;
+
+}
+#council{
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    width: 50px;
+    height: 50px;
+    /*width: 20px;*/
+
+}
+.work-countries{
+    width: 50%;
+    margin: 50px 0;
+    border: 1px solid rgba(17, 17, 17, 0.2);
+    border-radius: 20px;
+    padding: 20px;
+    float: right;
+}
+.work-h2{
+    margin-bottom:40px ;
+}
+#work-img{
+    width: 47%;
+    float: right;
+    margin: 50px 10px;
+    /*height: 90%;*/
+}
+#study-img{
+    width: 40%;
+    height: 60%;
+}
+#ul-nav{
+    width: 30%;
+    border-right: 1px solid rgba(17, 17, 17, 0.2);
+    float: left;
+    /*height: 10%;*/
+    margin-top: -200px;
+    padding: 10px ;
+}
+.study-ul{
+    color: black;
+    margin-bottom: 20px;
+    font-size: 19px;
+}
+.study-ul:hover{
+    color: #B97912;
+}
+.study-first-child{
+    width:60% ;
+    display: inline-table;
+}
+.study-ul::marker{
+    color: #B97912;
+}
+.study-connect-me{
+    float: left;
+    border-right: 2px solid #B97912;
+    border-radius: 20px;
+    width: 40%;
+    margin-top: -517px;
+    padding: 20px;
+    border-left: 2px solid #B97912;
+
+}
+.life-first-ul-li{
+    color: black;
+    list-style-type: none;
+    position: relative;
+    padding-bottom: 15px;
+}
+.life-first-ul-li:hover{
+    color: black;
+}
+.life-first-ul-li::before{
+                border: solid #e6af2e;
+                border-width: 0 2px 2px 0;
+                content: "";
+                display: inline-block;
+                padding: 3px;
+                position: absolute;
+                right: -13px;
+                top: 30%;
+                transform: rotate(135deg) translateX(-50%)!important;
+}
+.life-first-child{
+    border: 1px solid rgba(17, 17, 17, 0.2);
+    background-color: #fcfcfb;
+    border-radius: 20px;
+    height: 600px;
+    margin-bottom: 70px;
+}
+.life-first-child-first{
+    border-left: 1px solid #B97912;
+    display: inline-table;
+    padding: 20px 18px;
+    background-color: rgba(255, 99, 64,0.1);
+    /*margin-top: 0;*/
+    height:600px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+
+}
+.life-first-child-second{
+    display: inline-table;
+    border-right: 3px solid rgba(33, 33, 33,0.4);
+    margin:0 50px;
+    padding-right: 17px;
+    height: 200px;
+}
+.study-gif{
+    float: left;
+    margin-top: 60px;
+    margin-left: 60px;
+
+}
+.about-second-div-h5{
+    text-align: center;
+}
+.about-second-div{
+    width: 30%;
+    display: inline-block;
+    background: linear-gradient(180deg, #F9F9F9 0%, transparent);
+    padding: 24px;
+    border-radius: 16px;
+    margin-right: 27px;
+    text-align: center;
+}
+.go2tr-nav-reservation-item div a {
+    font-size: 16px;
+    padding: 10px 25px;
+    position: relative;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+.about-thirty-div-button{
+    padding: 13px 50px;
+    font-size: 1.5rem;
+    margin: 80px 0;
+
+}
+.feedback-input{
+    /*margin-right: 30%;*/
+}
+.profile-first-div-ul-li{
+    list-style-type: none;
+    box-sizing: border-box;
+    margin-left: 5%;
+    color: white;
+}
+.profile-first-div{
+    display: flex;
+    align-items: center;
+}
+.profile-first-div ul{
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex: 1;
+    box-sizing: border-box
+
+
+}
+.profile-first-div-ul-li a{
+    width: 117px;
+    height: 109px;
+    background: #166e6b;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: .5s;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    padding: 10px;
+
+}
+.profile-first-div-ul-li a:hover{
+    background-color: #09524f;
+    color: white;
+}

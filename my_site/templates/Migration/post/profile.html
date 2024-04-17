@@ -1,0 +1,75 @@
+{% extends "Migration/parent/base.html" %}
+{% load static %}
+{% block title %}mohajer{% endblock %}
+{% block head %}
+        <link rel="stylesheet" type="text/css" href="{% static "css/home.css" %}" >
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{% endblock %}
+{% block content %}
+    <div style="text-align: right">
+        <div>
+            <div class="profile-first-div">
+                <ul>
+                    <li class="profile-first-div-ul-li">
+                        <a href="{% url 'my_site:look_profile' %}">
+                            <i style="font-size:24px" class="fa">&#xf08b;</i>
+                            مشاهده پروفایل
+                        </a>
+                    </li>
+                    <li class="profile-first-div-ul-li">
+                        <a href="{% url 'my_site:edit_profile' %}">
+                            <i style="font-size:24px" class="fa">&#xf044;</i>
+                            ویرایش پروفایل
+                        </a>
+
+                    </li>
+                    <li class="profile-first-div-ul-li">
+                        <a href="#">
+                            <i style="font-size:24px;padding: 0 50px" class="fa">&#xf1cd;</i>
+                            پشتیبانی
+                        </a>
+
+                    </li>
+                    <li class="profile-first-div-ul-li">
+                        <a href="#">
+                            <i style="font-size:24px;padding: 0 50px" class="fa fa-user user"></i>
+                            عکس پروفایل
+                        </a>
+
+                    </li>
+                    <li class="profile-first-div-ul-li">
+                        <a href="#">
+                            <i style="font-size:24px" class="fa">&#xf02e;</i>
+                            دوره های نشان گذاری شده
+                        </a>
+
+                    </li>
+                    <li class="profile-first-div-ul-li">
+                        <a href="#">
+                            <i style="font-size:24px" class="fa">&#xf219;</i>
+                            دوره های خریداری شده
+                        </a>
+
+                    </li>
+                    <li class="profile-first-div-ul-li">
+                        <a href="{% url 'my_site:logout' %}">
+                            <i style="font-size:24px;padding: 0 50px" class="fa" >&#xf08b;</i>
+                            خروج
+                        </a>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div>
+
+        </div>
+        <div>
+
+        </div>
+        <div>
+
+        </div>
+<br><br><br>
+    </div>
+{% endblock %}

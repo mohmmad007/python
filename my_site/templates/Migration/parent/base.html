@@ -1,0 +1,99 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static "css/base.css" %}" >
+
+    <link rel="stylesheet" type="text/css" href="{% static "css/header.css" %}" >
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+    <meta charset="UTF-8">
+<title>{% block title %}Title{% endblock %}</title>
+    {% block head %}{% endblock %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+<body>
+{% include 'Migration/partials/header.html' %}
+{% include 'Migration/partials/navigation.html' %}
+{#{% if iamgetrue %}#}
+{#{% if form_image.instance.photo %}#}
+{##}
+{#    <img src="{{ form_image.instance.photo.url }}" alt="User Photo" style="border-radius: 1000px;width: 90px;height: 90px">#}
+{#{% endif %}#}
+{#{% endif %}#}
+<a href="{% url 'my_site:consulting' %}">
+    <img src="{% static 'images/headphone-help.jpg' %}" alt="" id="council">
+    </a>
+
+{#این کد برای پیام هاست.پیام های جنگو#}
+    {% if messages %}
+    <ul  style="text-align: right">
+        {% for message in messages %}
+            <li class="messages">{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+    <br><br>
+
+{% if not save_user %}
+    <a href="{% url 'my_site:signin' %}">
+    <button type="button" class="sign-button" >اول<br> ثبت نام<br> کن
+    </button></a>
+    <a href="{% url 'my_site:login' %}">
+    <button type="button"  class="sign-button login-button" >وارد شو
+    </button></a>
+{% else %}
+    <a href="{% url 'my_site:logout' %}">
+        <button type="button" class="sign-button logout-button" >به سلامت
+        </button></a>
+    <a href="{% url 'my_site:profile' %}">
+        <button type="button" class="sign-button profile-button" >پروفایلت
+        </button></a>
+
+{% endif %}
+    <div class="god">
+<div class="parent_div">
+    <div style="color: red">
+    {% if forms.errors %}
+{#            لطفا خطاهای زیر را اصلاح کنید:#}
+        <br> <br>
+        {% for field in forms %}
+            {% if field.errors %}
+                {% for error in field.errors %}
+{#                    {{ field.label }}:#}
+                    *{{ error }}
+                    <br>
+                {% endfor %}
+            {% endif %}
+        {% endfor %}
+
+        {% if forms.non_field_errors %}
+            {{ forms.non_field_errors }}
+            <br>
+    {% endif %}
+
+    {% endif %}
+</div>
+
+
+{% block content %}
+{% endblock %}
+
+</div>
+    </div>
+<button onclick="scrollToTop()" id="go-top-button">برو بالا</button>
+{% include 'Migration/partials/footer.html' %}
+
+</body>
+<script>
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+
+</html>

@@ -1,0 +1,89 @@
+{% extends "Migration/parent/base.html" %}
+{% load static %}
+{% block title %}mohajer{% endblock %}
+{% block head %}
+        <link rel="stylesheet" type="text/css" href="{% static "css/home.css" %}" >
+        <link rel="stylesheet" type="text/css" href="{% static "css/login.css" %}" >
+
+<script>
+function togglePasswordVisibility(inputId) {
+  var input = document.getElementsByName(inputId)[0];
+  if (input.type === 'password') {
+    input.type = 'text';
+  } else {
+    input.type = 'password';
+  }
+}
+</script>
+
+{% endblock %}
+{% block content %}
+
+       <form action="#" method="post">
+        {% csrf_token %}
+        <p style="color: white" class="p-1"> <b>فرم اطلاعات شخصی {{ account.user_name}}</b></p>
+    <br><br>
+<div style="direction: rtl">
+    {% if forms.errors %}
+            لطفا خطاهای زیر را اصلاح کنید:
+        <br> <br>
+        {% for field in forms %}
+            {% if field.errors %}
+                {% for error in field.errors %}
+                    {{ field.label }}: {{ error }}
+                    <br>
+                {% endfor %}
+            {% endif %}
+        {% endfor %}
+
+        {% if forms.non_field_errors %}
+            {{ forms.non_field_errors }}
+            <br>
+    {% endif %}
+
+    {% endif %}
+</div>
+   {% if not_correct_password %}
+       <h5 style="color: #f39c12;text-align: right">پسوورد با تکرار آن برابر نیست</h5>
+   {% endif %}
+
+        <p class="p-2">نام کاربری</p>
+        <i class="fa fa-user user"></i>  <input type="text" name="user_name" placeholder= "نام کاربری خودرا وارد کنید"
+       value="{{ account.user_name | default:'' }}">
+        <p class="p-2">نام</p>
+        <i class="fa fa-user user"></i>  <input type="text" name="first_name" placeholder= "نام خودرا را وارد کنید"
+       value="{{ account.first_name | default:'' }}">
+        <p class="p-2">نام خانوادگی</p>
+        <i class="fa fa-user user"></i>   <input type="text" name="last_name" placeholder= "نام خانوادگی خودرا وارد کنید"
+       value="{{ account.last_name | default:'' }}">
+
+       <p class="p-2">پسوورد</p>
+       <a onclick="togglePasswordVisibility('password')"><i class="fa fa-lock lock"></i></a> <input type="password" name="password" placeholder="پسوورد خود را وارد کنید"
+       value="{{ account.password | default:'' }}">
+
+       <p class="p-2">پسوورد</p>
+       <a onclick="togglePasswordVisibility('repassword')">
+           <i class="fa fa-lock lock"></i></a>
+           <input type="password" name="repassword" placeholder="تکرار پسوورد خود را وارد کنید"
+       value="{{ account.password | default:'' }}">
+
+       <p class="p-2">ایمیل</p>
+       <i class="fa fa-google google"></i> <input type="email" name="email" placeholder="ایمیل خودرا را وارد کنید"
+       value="{{ account.email | default:'' }}">
+       <p class="p-2">شماره موبایل</p>
+       <i class="fa fa-phone phone" ></i> <input type="number" name="mobile" placeholder="شماره موبایل را وارد کنید"
+       value="{{ account.mobile | default:'' }}">
+
+        <input type="submit" value="ثبت نام">
+
+
+
+          <i class="fa fa-google  g"></i>
+        <i class="fa fa-twitter  t"></i>
+        <i class="fa fa-facebook-f  f"></i>
+
+         <p class="p-3 p-1">برای استفاده ثبت نام کنید</p>
+             </form>
+
+{% endblock %}
+

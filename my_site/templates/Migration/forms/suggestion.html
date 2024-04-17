@@ -1,0 +1,52 @@
+{% extends "Migration/parent/base.html" %}
+{% load static %}
+{% block title %}mohajer{% endblock %}
+{% block head %}
+{#        <link rel="stylesheet" type="text/css" href="{% static "css/login.css" %}" >#}
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+{% endblock %}
+{% block content %}
+
+{#این کد برای پیام هاست.پیام های جنگو#}
+{#    {% if messages %}#}
+{#    <ul class="messages" style="text-align: right">#}
+{#        {% for message in messages %}#}
+{#            <li>{{ message }}</li>#}
+{#        {% endfor %}#}
+{#    </ul>#}
+{#{% endif %}#}
+{##}
+
+    <form method="post" style="text-align: right;background-color: #cccccc;border-radius: 15px;width: 40%;padding: 15px">
+        {% csrf_token %}
+        <label>نام:
+            <input type="text" name="name">
+        </label>
+        <br>
+        <label>نظرت:
+<textarea  value="نظر خود را اینجا بنویسید" name="suggest" style="resize: none;max-width: 300px;max-height: 300px;">
+</textarea>
+        </label>
+        <br>
+
+        <label>
+
+    <input type="submit" value="ارسال" style="background-color: #166e6b;color: white;padding: 10px;border: 2px solid #09524f;border-radius: 15px">
+
+        </label>    </form>
+<br><br><br><br>
+        {% for account in dt %}
+    <div style="margin-bottom: 40px;text-align: right;background-color: #cccccc;padding: 30px;border-radius:15px;width: 40%  ">
+    <div>
+
+           <span style="font-size:15px;">{{ account.0|default:'' }}</span>
+            <br><br>
+            <h5>{{ account.1 |default:''}}</h5>
+            <p>{{ account.2 |default:'' }}</p>
+    </div>
+    </div>
+
+        {% endfor %}
+{% endblock %}
+{#{% include "shared/messages.html" %}#}

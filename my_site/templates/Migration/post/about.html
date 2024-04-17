@@ -1,0 +1,84 @@
+{% extends "Migration/parent/base.html" %}
+{% load static %}
+{% block title %}mohajer{% endblock %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div style="text-align: right">
+        <div>
+
+<section style="margin-top:90px" class="home-consulting consulting-blog">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="g2-call">
+                          <div class="g2-call__right">
+                              <h2>برای مهاجرت نیاز به مشاوره داری؟</h2>
+                              <p>همین حالا فرم درخواست رزرو مشاوره رو پر کن تا برای مهاجرت مشکلی نداشته باشی</p>
+                          </div>
+                          <div class="g2-call__left">
+                              <a href="{% url 'my_site:consulting' %}" class="button_Counseling">درخواست فرم مشاوره</a>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+        <br><br><br>
+        <div>
+        <h4 style="text-align: center"> چرا مهاجر...؟!</h4>
+            <br><br>
+            <div>
+                <div class="about-second-div">
+                    <h5 class="about-second-div-h5" >سابقه درخشان</h5>
+                    <br>
+                    <p>موسسه مهاجر با 14 سال سابقه فعالیت در زمینه مهاجرت و دارای بیش از هزار پرونده موفق در سال</p>
+                </div>
+                <div class="about-second-div">
+                    <h5 class="about-second-div-h5">مشاوره دقیق</h5>
+                    <br>
+                    <p>امکان دریافت مشاوره مهاجرتی از متخصصین این زمینه که خود سابقه مهاجرت و زندگی در اکثر کشورهای جهان را دارند</p>
+                </div>
+                <div class="about-second-div">
+                    <h5 class="about-second-div-h5">همراهی شما</h5>
+                    <br>
+                    <p>همراهی علاقمندان و متقاضیان امور مهاجرت با خانواده مهاجر در تمامی پلتفرم های مجازی و حقیقی</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <a class="button_Counseling_suggestions about-thirty-div-button"  href="{% url 'my_site:home' %}" style="margin-right: 10%">مشاوره: 1111 248 01+ </a>
+            <a class="button_Counseling_suggestions about-thirty-div-button"  href="{% url 'my_site:home' %}">رزرو مشاوره مهاجرتی </a>
+            <a class="button_Counseling_suggestions about-thirty-div-button"  href="{% url 'my_site:consulting' %}">درخواست فرم مشاوره </a>
+
+        </div>
+<section style="margin-top:90px" class="home-consulting consulting-blog">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="g2-call" style="background-color: #f39c12">
+                          <div class="g2-call__right">
+                              <h2>نظرات و پیشنهاداتتو با ما درمیون بزار</h2>
+{#                              <p>همین حالا فرم درخواست رزرو مشاوره رو پر کن تا برای مهاجرت مشکلی نداشته باشی</p>#}
+                          </div>
+                          <div class="g2-call__left">
+                              <a href="{% url 'my_site:feedback' %}" class="button_Counseling" style="margin-top: 0;
+                                        background-color:#31414a ">بزن روش</a>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+<br><br><br>
+        <div>
+
+        <h4>درباره مهاجر</h4>
+            <br>
+            <p>مهاجرت، خرید ملک، ثبت شرکت، سفر و تحصیل در خارج از کشور، موضوعاتی هستند که این روزها به شنیدنشان عادت کرده‌ایم. خانواده بزرگ گو تو تی آر در کنار شماست تا این مسیر برایتان آسان شود. هدف تیم، ارائه اطلاعات دقیق و مشاوره کامل، هم راستا با شرایط و رزومه شما و ترسیم بهترین مسیر مهاجرتی پیش رویتان است که در ادامه این مسیر با ارائه خدمات کامل، تمام مراحل اخذ پذیرش تحصیلی، کاری و همچنین فرایند خرید ملک، ثبت شرکت و … انجام داده و آینده‌ای مطلوب و باب میل شما برایتان به ارمغان می‌آورد. گو تو تی آر متشکل از ۲۰۰ نفر است که در زمینه مهاجرت به تمامی کشور های پرطرفدار دنیا در تمامی زمینه‌های مهاجرتی اعم از تحصیلی، خرید ملک و ثبت شرکت آماده ارائه خدمات هستند و در حال حاضر در پنج شهر داخل کشور و در چهار شعبه خارج از کشور مستقر می‌باشد.</p>
+        </div>
+        <div>
+
+        </div>
+    </div>
+{% endblock %}

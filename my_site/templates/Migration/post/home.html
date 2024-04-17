@@ -1,0 +1,133 @@
+{% extends "Migration/parent/base.html" %}
+{% load static %}
+{% block title %}mohajer{% endblock %}
+{% block head %}<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">{% endblock %}
+
+{% block content %}
+        <div class="first">
+        <div class="first_child">
+            <video controls class="video-home" ><source src="{% static 'video/tablig-go2tr.mp4' %}" type="video/mp4"></video>
+        </div>
+        <div class="first_child first_child_text">
+            <h2>مهاجرتت با ما</h2>
+            <h5>شرکت مهاجر، مرجع اطلاعات مهاجرتی و خدمات مشاوره آنلاین و روش های مختلف مهاجرت، با خدمات رسانی در تمام روز در ایران</h5>
+            <a href="{% url 'my_site:study' %}" class="button">تحصیل در خارج</a>
+            <a href="{% url 'my_site:about' %}" class="button_about">ارتباط با ما</a>
+
+        </div>
+
+    </div>
+    <div>
+        <h2 id="works">خدمات شرکت مهاجر</h2>
+        <div class="works_parent">
+            <div class="works_child">
+
+                <h3>تحصیل در خارج</h3>
+                <p>شرایط شرکت در آزمون ها، رشته ها و دانشگاه های معتبر خارج را در این بخش مطالعه کنید.</p>
+                        <div>
+                            <br><br>
+                    <a href="#" class="button">تحصیل در کانادا</a>
+                    <a href="#" class="button">تحصیل در آلمان</a>
+                    <a href="#" class="button">تحصیل در ژاپن</a>
+                    <a href="#" class="button">تحصیل در فرانسه</a>
+                </div>
+            </div>
+            <div class="works_child">
+
+                <h3> خرید ملک/ثبت شرکت در خارج</h3>
+                <p>با شرایط ثبت شرکت و یا خرید/اجاره ملک در خارج از کشور آشنا شوید. چه شرایطی در این مسیر وجود دارد؟</p>
+                <div>
+                    <a href="#" class="button">ملک در انگلیس</a>
+                    <a href="#" class="button">ملک در کانادا</a>
+                    <a href="#" class="button">ملک در کره جنوبی</a>
+                    <a href="#" class="button">ملک در فرانسه</a>
+                </div>
+            </div>
+
+            <div class="works_child">
+                <h3>کار در خارج</h3>
+                <p>با شرایط کار در خارج، انواع ویزاهای کاری و مشاغل مورد‌نیاز کشورها در این بخش آشنا شوید</p>
+                <div>
+                    <a href="#" class="button">کار در کانادا</a>
+                    <a href="#" class="button">کار در آلمان</a>
+                    <a href="#" class="button">کار در ژاپن</a>
+                    <a href="#" class="button">کار در فرانسه</a>
+                </div>
+            </div>
+
+                <div class="works_child">
+                    <h3>سفر تفریحی به خارج</h3>
+                    <p>اگه حوصلت سررفته و دنبال یه سفر جذاب و هیجان انگیز هستی حتما این بخشو ببین</p>
+                    <div>
+                        <a href="#" class="button">سفر به آمریکا</a>
+                        <a href="#" class="button">سفر به آلمان</a>
+                        <a href="#" class="button">سفر به اسپانیا</a>
+                        <a href="#" class="button">سفر به فرانسه</a>
+                    </div>
+                </div>
+        </div>
+
+    </div>
+
+<section style="margin-top:90px" class="home-consulting consulting-blog">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="g2-call">
+                          <div class="g2-call__right">
+                              <h2>برای مهاجرت نیاز به مشاوره داری؟</h2>
+                              <p>همین حالا فرم درخواست رزرو مشاوره رو پر کن تا برای مهاجرت مشکلی نداشته باشی</p>
+                          </div>
+                          <div class="g2-call__left">
+                              <a href="{% url 'my_site:consulting' %}" class="button_Counseling">درخواست فرم مشاوره</a>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+                          <div class="g2-call-news">
+                          <div class="g2-call__right">
+                              <h3 style="text-align: center;padding-bottom: 20px;color:#f39c12 ">اخبار</h3>
+                              <a href="#" class="news">
+
+                              <h5>چندین خانواده افریقایی الاصل از خاک کشور آلمان اخراج شدند</h5>
+
+                              </a>
+                              <a href="#" class="news">
+
+                              <h5>مجلس انگلستان با طرح ویرایش قوانین پذیرش مهاجرین مخالفت کرد</h5>
+                              </a><a href="#" class="news">
+
+                              <h5>دولت کانادا اعلام کرد امسال 10000 مهاجر تابعیت این کشور را دریافت کردند</h5>
+                              </a>
+                              </div>
+
+                                  <div class="g2-call__left">
+{#                              <a href="#" class="button_Counseling_news">پیشنهادات و انتقادات</a>#}
+{#                          </div>#}
+                        </div>
+            </div>
+
+
+            <div class="suggestions_news">
+                        <div class="g2-call-suggestions">
+                          <div class="g2-call__right">
+                              <h5>اگه پیشنهادی،تجربه ای یا انتقادی داری باهامون درمیون بزار </h5>
+                              </div>
+                          <div class="g2-call__left">
+                              <a href="{% url 'my_site:suggestion' %}" class="button_Counseling_suggestions">پیشنهادات و انتقادات</a>
+                          </div>
+                        </div>
+
+
+    </div>
+<script>
+    setInterval(function(){
+        const headings = document.querySelectorAll('.g2-call-news .g2-call__right a');
+        const lastHeading = headings[headings.length - 1];
+        lastHeading.parentNode.insertBefore(lastHeading, headings[0]);
+    }, 5000); // هر 3 ثانیه یکبار
+</script>
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "Migration/parent/base.html" %}
+{% load static %}
+{% block title %}mohajer{% endblock %}
+{% block head %}
+        <link rel="stylesheet" type="text/css" href="{% static "css/login.css" %}" >
+
+{% endblock %}
+{% block content %}
+
+   <form action="#" method="post">
+   {% csrf_token %}
+        <p style="color: white;text-align: center"> <b> ورود</b></p>
+        <p class="p-2">نام کاربری</p>
+      <i class="fa fa-user user"></i>  <input type="text" name="user_name" placeholder= "نام کاربری را وارد کنید" >
+
+      <p class="p-2">کلمه عبور</p>
+       <i class="fa fa-lock user"></i> <input type="password" name="password" placeholder="کلمه عبور را وارد کنید">
+        <a href="#" class="p-2" style="text-align: right">فراموشی کلمه عبور؟</a>
+
+        <input type="submit" value="ورود">
+
+
+
+          <i class="fa fa-google  g"></i>
+        <i class="fa fa-twitter  t"></i>
+        <i class="fa fa-facebook-f  f"></i>
+
+        <br><br>
+         <a class="p-6" href="#">ثبت نام</a>
+    </form>
+{% endblock %}

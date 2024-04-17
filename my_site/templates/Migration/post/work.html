@@ -1,0 +1,49 @@
+{% extends "Migration/parent/base.html" %}
+{% load static %}
+{% block title %}mohajer{% endblock %}
+{% block head %}<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">{% endblock %}
+
+{% block content %}
+    <div   style="text-align: right">
+<div>
+    <h2 class="work-h2">کار در خارج</h2>
+    <p>اگر هدف شما از مهاجرت، کار در خارج است باید به مواردی مانند نرخ بیکاری، مشاغل پرطرفدار و مشاغل پرمتقاضی در کشور مقصد توجه کنید. بر اساس گزارش سالنامه مهاجرتی ویژه ایرانیان، جمعیت مهاجران ایرانی در سال ۲۰۲۰، برابر با ۱.۸ میلیون نفر است که برخی از آن‌ها با هدف کار در خارج و برخی با هدف تحصیل به کشورهای دیگر مهاجرت کرده‌اند. در حالی که کار در خارج از پرطرفدارترین روش‌های مهاجرت است، دشواری‌هایی نیز دارد از جمله تفاوت‌های فرهنگی در محیط کار. برای کار در خارج، داشتن مدرک لیسانس، داشتن حداقل دو سال سابقه کار و تسلط به زبان کشور مقصد ضروری است. داشتن جاب آفر یا استفاده از سایر برنامه‌های مهاجرتی مانند ویزای جستجوی کار آلمان یا برنامه‌های اکسپرس اینتری کانادا استفاده کنید.</p>
+</div>
+        <div class="work-countries">
+            <h3>کار در کدام کشورها بهتر است؟</h3>
+            <a href="#" class="button_about">اسپانیا</a>
+            <a href="#" class="button_about">کانادا</a>
+            <a href="#" class="button_about">روسیه</a>
+            <a href="#" class="button_about">آلمان</a>
+            <a href="#" class="button_about">ایتالیا</a>
+            <a href="#" class="button_about">فرانسه</a>
+            <a href="#" class="button_about">ترکیه</a>
+            <a href="#" class="button_about">آمریکا</a>
+            <a href="#" class="button_about">قزاقستان</a>
+            <a href="#" class="button_about">انگلیس</a>
+
+        </div>
+<img src="{% static 'images/work.jpg' %}" alt="work" id="work-img">
+        <div>
+    <h2 class="work-h2">اصول یافتن شغل در خارج</h2>
+    <p>کار در خارج باعث می‌شود مهارت‌های خود را افزایش دهید و تجربه‌های جدید در محیط‌های متفاوت کسب کنید. از آن جایی که یافتن کار در خارج ممکن است فرایندی طولانی و پیچیده داشته باشد، شناخت روش‌های آن می‌تواند سرعت شما را در پیدا کردن شغل دلخواه بالاتر ببرد.</p>
+</div>
+    <section style="margin-top:90px" class="home-consulting consulting-blog">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="g2-call">
+                          <div class="g2-call__right">
+                              <h2>برای مهاجرت نیاز به مشاوره داری؟</h2>
+                              <p>همین حالا فرم درخواست رزرو مشاوره رو پر کن تا برای مهاجرت مشکلی نداشته باشی</p>
+                          </div>
+                          <div class="g2-call__left">
+                              <a href="{% url 'my_site:consulting' %}" class="button_Counseling">درخواست فرم مشاوره</a>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+    </div>
+
+{% endblock %}

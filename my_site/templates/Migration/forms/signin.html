@@ -1,0 +1,81 @@
+{% extends "Migration/parent/base.html" %}
+{% load static %}
+{% block title %}mohajer{% endblock %}
+{% block head %}
+        <link rel="stylesheet" type="text/css" href="{% static "css/login.css" %}" >
+
+{% endblock %}
+{% block content %}
+{#    {% if messages %}#}
+{#    <ul class="messages" style="text-align: right">#}
+{#        {% for message in messages %}#}
+{#            <li>{{ message }}</li>#}
+{#        {% endfor %}#}
+{#    </ul>#}
+{#{% endif %}#}
+
+   <form action="#" method="post">
+        {% csrf_token %}
+        <p style="color: white" class="p-1"> <b>ثبت نام</b></p>
+{#    <br><br>#}
+{#<div style="direction: rtl">#}
+{#    {% if forms.errors %}#}
+{#            لطفا خطاهای زیر را اصلاح کنید:#}
+{#        <br> <br>#}
+{#        {% for field in forms %}#}
+{#            {% if field.errors %}#}
+{#                {% for error in field.errors %}#}
+{#                    {{ field.label }}:#}
+{#                    {{ error }}#}
+{#                    <br>#}
+{#                {% endfor %}#}
+{#            {% endif %}#}
+{#        {% endfor %}#}
+{##}
+{#        {% if forms.non_field_errors %}#}
+{#            {{ forms.non_field_errors }}#}
+{#            <br>#}
+{#    {% endif %}#}
+{##}
+{#    {% endif %}#}
+{#</div>#}
+   {% if not_correct_password %}
+       <h5 style="color: #f39c12;text-align: right">پسوورد با تکرار آن برابر نیست</h5>
+   {% endif %}
+
+        <p class="p-2">نام کاربری</p>
+        <i class="fa fa-user user"></i>  <input {% if forms.user_name.value %} value="{{ forms.user_name.value }}" {% else %}value="{{ dict_form.0 | default:'' }}"{% endif %}
+       type="text" name="user_name" placeholder= "نام کاربری خودرا وارد کنید" >
+        <p class="p-2">نام</p>
+        <i class="fa fa-user user"></i>  <input {% if forms.first_name.value %} value="{{ forms.first_name.value }}"  {% else %}value="{{ dict_form.1 | default:'' }}" {% endif %} type="text" name="first_name" placeholder= "نام خودرا را وارد کنید" >
+        <p class="p-2">نام خانوادگی</p>
+        <i class="fa fa-user user"></i>   <input {% if forms.last_name.value %} value="{{ forms.last_name.value }}"  {% else %}value="{{ dict_form.2 | default:'' }}"{% endif %} type="text" name="last_name" placeholder= "نام خانوادگی خودرا وارد کنید" >
+
+       <p class="p-2">پسوورد</p>
+       <i class="fa fa-lock lock"></i> <input {% if forms.password_name.value %} value="{{ forms.password_name.value }}"  {% else %}value="{{ dict_form.3 | default:'' }}" {% endif %} type="password" name="password" placeholder="پسوورد خود را وارد کنید">
+       <p class="p-2">تکرار پسوورد</p>
+       <i class="fa fa-lock lock"></i> <input {% if forms.repassword.value %} value="{{ forms.repassword.value }}"  {% else %}value="{{ dict_form.4 | default:'' }}" {% endif %} type="password" name="repassword" placeholder="تکرار پسوورد را وارد کنید">
+
+
+       <p class="p-2">ایمیل</p>
+       <i class="fa fa-google google"></i> <input {% if forms.email.value %} value="{{ forms.email.value }}"  {% else %}value="{{ dict_form.5 | default:'' }}" {% endif %} type="email" name="email" placeholder="ایمیل خودرا را وارد کنید">
+       <p class="p-2">شماره موبایل</p>
+       <i class="fa fa-phone phone" ></i> <input {% if forms.mobile.value %} value="{{ forms.mobile.value }}"  {% else %}value="{{ dict_form.6 | default:'' }}" {% endif %} type="number" name="mobile" placeholder="شماره موبایل را وارد کنید">
+       <br><br><br>
+       <a href="{% url 'my_site:Verification_code' %}" ><input type="submit" value="ارسال کد تایید"
+                 id="Verification_button" ></a>
+        <input type="number" id="Verification_input" name="code" >
+
+
+
+        <input type="submit" value="ثبت نام">
+
+
+
+          <i class="fa fa-google  g"></i>
+        <i class="fa fa-twitter  t"></i>
+        <i class="fa fa-facebook-f  f"></i>
+
+         <p class="p-3 p-1">برای استفاده ثبت نام کنید</p>
+             </form>
+{% endblock %}

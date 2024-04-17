@@ -1,0 +1,95 @@
+.visa-p{
+    margin: 40px auto;
+}
+.visa-div{
+    background-color: #fdf7ea;
+    border: 1px solid #f5dfab;
+    border-radius: 15px;
+    padding: 24px;
+}
+.visa_child{
+    float: left;
+    width: 43%;
+    text-align: center;
+    background-color: #fcfcfb;
+    margin: 1rem;
+    padding: 2.8rem 7rem;
+    border: 1px solid #f39c12;
+    border-radius: 20px;
+    color: black;
+    height: 100%;
+
+}
+.visa-usa-p{
+    margin: 30px auto;
+}
+.visa-usa-first-ul{
+    color: black;
+}
+.visa-usa-first-ul:hover{
+    color: #B97912;
+
+}
+.visa-usa-img{
+    width: 45%;
+    display: inline;
+}
+figure{
+    width: 42%;
+    text-align: center;
+
+}
+.visa-usa-img2{
+    float: left;
+    margin-top: -477px;
+
+}
+.visa-usa-fig2{
+    float: left;
+    margin-top: -4rem;
+
+}
+.visa-usa-second-div{
+    border: 1px solid #e8e8e9;
+    border-radius: 16px;
+    padding: 29px;
+    margin: 72px 0;
+    width: 60%;
+}
+.visa-usa-last-div{
+    margin-top: 15px;
+    width: 80%;
+}
+.visa-usa-last-ul-li{
+    margin-bottom: 10px;
+}
+.visa-germany-second-ul-li::marker{
+    color: #B97912;
+}
+.benifit-abroad li::before{
+    align-items: center;
+    background-color: #B97912;
+    border-radius: 50%;
+    color: #fff;
+    content: counter(headings, decimal);
+    counter-increment: headings;
+    display: flex;
+    font-size: 16px;
+    height: 24px;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 24px;
+}
+
+.benifit-abroad{
+    counter-reset: headings;
+    display: grid !important;
+    list-style: none !important;
+}
+.benifit-abroad li{
+    margin-right: 12px;
+    padding-right: 40px;
+    position: relative;
+}

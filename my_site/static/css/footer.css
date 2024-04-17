@@ -1,0 +1,51 @@
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    /*position: fixed;*/
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 960px;
+    margin: 0 auto;
+}
+i{
+    margin: 0 6px;
+ }
+#apple:hover{
+    color: #f39c12;
+}
+#facebook:hover{
+    color: royalblue
+}
+
+#telegram:hover{
+    color: #3498db;
+}
+#instagram:hover{
+    color: fuchsia
+}
+#linkedin:hover{
+    color:royalblue
+}
+#youtube:hover{
+    color: red
+}
+#twitter:hover{
+    color: #3498db
+}
+#whatsapp:hover{
+    color:limegreen
+}
+
+a{
+
+    color: white;
+}
+a:hover{
+    text-decoration: none;
+
+}

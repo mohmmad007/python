@@ -1,0 +1,15 @@
+{% extends "Migration/parent/base.html" %}
+{% load static %}
+{% block title %}mohajer{% endblock %}
+{% block head %}
+        <link rel="stylesheet" type="text/css" href="{% static "css/home.css" %}" >
+{% endblock %}
+{% block content %}
+    <div>
+    :user name<p>{{account.user_name}}</p>
+    :name<p>{{account.first_name}}{{ account.last_name }}</p>
+    :email<p>{{account.email}}</p>
+    :mobile<p>{{account.mobile}}</p>
+
+    </div>
+{% endblock %}

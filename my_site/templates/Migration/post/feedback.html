@@ -1,0 +1,67 @@
+{% extends "Migration/parent/base.html" %}
+{% load static %}
+{% block title %}mohajer{% endblock %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/vissa.css' %}">
+
+{% endblock %}
+
+{% block content %}
+
+    <p>
+    {% if sent %}
+    پیام شما ثبت شد.با تشکر
+    {% endif %}
+    </p>
+    <form method="post" style="text-align: right">
+    {% csrf_token %}
+        <label>نام:
+            <input type="text" name="name" class="feedback-input">
+        </label>
+        <br><br>
+        <label>ایمیل:
+            <input type="email" name="email" class="feedback-input">
+        </label>
+        <br><br>
+        <label>شماره موبایل:
+            <input type="text" name="phone" class="feedback-input">
+        </label>
+        <br><br>
+        <label>موضوع:
+            <select name="subject" required class="feedback-input">
+                <option value="شکایات">شکایات</option>
+                <option value="انتقادات و پیشنهادات">انتقادات و پیشنهادات</option>
+
+            </select>
+        </label>
+        <br><br>
+        <label>پیام:
+            <input type="text" name="message" class="feedback-input">
+        </label>
+        <br><br>
+    <input type="submit" value="ثبت پیام" class="feedback-input">
+    </form>
+
+        <br><br>
+<div style="direction: rtl">
+    {% if forms.errors %}
+            لطفا خطاهای زیر را اصلاح کنید:
+        <br> <br>
+        {% for field in forms %}
+            {% if field.errors %}
+                {% for error in field.errors %}
+                    {{ field.label }}: {{ error }}
+                    <br>
+                {% endfor %}
+            {% endif %}
+        {% endfor %}
+
+        {% if forms.non_field_errors %}
+            {{ forms.non_field_errors }}
+            <br>
+    {% endif %}
+
+    {% endif %}
+</div>
+{% endblock %}
