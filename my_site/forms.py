@@ -10,6 +10,7 @@ class signin_form(forms.Form):
     email = forms.CharField(required=False, label='ایمیل')
     mobile = forms.CharField(required=False, label='شماره موبایل')
     code = forms.CharField(required=False, label='کد تایید')
+    photo = forms.ImageField(required=False)
 
     def clean_password(self):
         password = self.cleaned_data['password']
@@ -39,8 +40,8 @@ class signin_form(forms.Form):
     def clean_first_name(self):
         first_name = self.cleaned_data['first_name']
         if first_name:
-            if len(first_name) < 6:
-                raise forms.ValidationError(' نام باید حداقل شش کاراکتر باشد')
+            if len(first_name) < 2:
+                raise forms.ValidationError(' نام باید حداقل دو کاراکتر باشد')
             elif len(first_name) > 20:
                 raise forms.ValidationError(' نام باید حداکثر بیست کاراکتر باشد')
             else:
@@ -52,8 +53,8 @@ class signin_form(forms.Form):
     def clean_last_name(self):
         last_name = self.cleaned_data['last_name']
         if last_name:
-            if len(last_name) < 6:
-                raise forms.ValidationError(' نام خانوادگی باید حداقل شش کاراکتر باشد')
+            if len(last_name) < 4:
+                raise forms.ValidationError(' نام خانوادگی باید حداقل چهار کاراکتر باشد')
             elif len(last_name) > 20:
                 raise forms.ValidationError(' نام خانوادگی باید حداکثر بیست کاراکتر باشد')
             else:
@@ -150,3 +151,15 @@ class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
         fields = ['photo']
+
+
+# from .models import Document
+#
+# class DocumentForm(forms.ModelForm):
+#     class Meta:
+#         model = Document
+#         fields = ['document_addr']
+
+class reset_pass_form(forms.Form):
+    email=forms.EmailField(required=True)
+    code=forms.CharField(required=False)

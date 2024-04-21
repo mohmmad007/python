@@ -15,7 +15,7 @@
 
       <p class="p-2">کلمه عبور</p>
        <i class="fa fa-lock user"></i> <input type="password" name="password" placeholder="کلمه عبور را وارد کنید">
-        <a href="#" class="p-2" style="text-align: right">فراموشی کلمه عبور؟</a>
+        <a href="{% url 'my_site:reset_password' %}" class="p-2" style="text-align: right">فراموشی کلمه عبور؟</a>
 
         <input type="submit" value="ورود">
 

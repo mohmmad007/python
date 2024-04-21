@@ -17,28 +17,6 @@
    <form action="#" method="post">
         {% csrf_token %}
         <p style="color: white" class="p-1"> <b>ثبت نام</b></p>
-{#    <br><br>#}
-{#<div style="direction: rtl">#}
-{#    {% if forms.errors %}#}
-{#            لطفا خطاهای زیر را اصلاح کنید:#}
-{#        <br> <br>#}
-{#        {% for field in forms %}#}
-{#            {% if field.errors %}#}
-{#                {% for error in field.errors %}#}
-{#                    {{ field.label }}:#}
-{#                    {{ error }}#}
-{#                    <br>#}
-{#                {% endfor %}#}
-{#            {% endif %}#}
-{#        {% endfor %}#}
-{##}
-{#        {% if forms.non_field_errors %}#}
-{#            {{ forms.non_field_errors }}#}
-{#            <br>#}
-{#    {% endif %}#}
-{##}
-{#    {% endif %}#}
-{#</div>#}
    {% if not_correct_password %}
        <h5 style="color: #f39c12;text-align: right">پسوورد با تکرار آن برابر نیست</h5>
    {% endif %}

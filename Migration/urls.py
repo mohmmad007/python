@@ -35,4 +35,5 @@ urlpatterns = [
     path('home/',include('my_site.urls',namespace='my_site')),
     path('telegram/', django_telethon_urls()),
 ]
-
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -11,6 +11,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </head>
 
     <meta charset="UTF-8">
@@ -20,25 +22,29 @@
 <body>
 {% include 'Migration/partials/header.html' %}
 {% include 'Migration/partials/navigation.html' %}
-{#{% if iamgetrue %}#}
-{#{% if form_image.instance.photo %}#}
-{##}
-{#    <img src="{{ form_image.instance.photo.url }}" alt="User Photo" style="border-radius: 1000px;width: 90px;height: 90px">#}
-{#{% endif %}#}
-{#{% endif %}#}
+
+{% if form_image.instance.photo and save_user %}
+
+    <img src="{{ form_image.instance.photo.url }}" alt="User Photo" style="border-radius: 1000px;width: 90px;height: 90px">
+{% endif %}
+
 <a href="{% url 'my_site:consulting' %}">
     <img src="{% static 'images/headphone-help.jpg' %}" alt="" id="council">
     </a>
 
 {#این کد برای پیام هاست.پیام های جنگو#}
     {% if messages %}
-    <ul  style="text-align: right">
+    <ul  style="text-align: right;margin-top:10px">
         {% for message in messages %}
             <li class="messages">{{ message }}</li>
+
         {% endfor %}
     </ul>
-{% endif %}
-    <br><br>
+            <button id="clearMessagesButton" style=";border:none;width: 15%;border-radius: 20px;background-color: #f39c12;color: white;padding: 10px">پیام پاک کن</button>
+
+    {% endif %}
+
+<br><br>
 
 {% if not save_user %}
     <a href="{% url 'my_site:signin' %}">
@@ -94,6 +100,13 @@
 function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+$(document).ready(function() {
+    $("#clearMessagesButton").click(function() {
+        $(".messages").remove();
+        $("#clearMessagesButton").remove();
+    });
+});
 </script>
 
 </html>

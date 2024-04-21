@@ -2,21 +2,37 @@
 {% load static %}
 {% block title %}mohajer{% endblock %}
 {% block head %}
-{# <link rel="stylesheet" type="text/css" href="{% static "css/login.css" %}" > #}
+ <link rel="stylesheet" type="text/css" href="{% static "css/login.css" %}" >
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 {% endblock %}
 {% block content %}
 
-{#<h1>Upload Your Photo</h1>#}
+<h1>Upload Your Photo</h1>
 <form method="post" enctype="multipart/form-data">
+    <h2>یه عکس انتخاب کن</h2>
     {% csrf_token %}
-    {{ form_image.as_p }}
-    <button type="submit">انتخاب</button>
+    <input type="file" name="photo">
+    <input type="submit">
 </form>
 {#{% if post == True %}#}
-{#{% if form.instance.photo %}#}
+{#{% if form_image.instance.photo %}#}
 {#    <h2>Your Photo:</h2>#}
-{#    <img src="{{ form.instance.photo.url }}" alt="User Photo" style="border-radius: 1000px;width: 90px;height: 90px">#}
+{#    <img src="{{ form_image.instance.photo.url }}" alt="User Photo" style="border-radius: 1000px;width: 90px;height: 90px">#}
 {#{% endif %}#}
 {#{% endif %}#}
 {% endblock %}
+
+{#{% extends 'base.html' %}#}
+{##}
+{#{% block content %}#}
+{#  <form method="post" enctype="multipart/form-data">#}
+{#    {% csrf_token %}#}
+{#    {{ form.as_p }}#}
+{#    <button type="submit">Upload</button>#}
+{#  </form>#}
+{##}
+{#  <p><a href="{% url 'my_site:home' %}">Return to home</a></p>#}
+{##}
+{#    <img src="{{ MEDIA_URL}}{{document.document_addr }}">#}
+{##}
+{#{% endblock %}#}

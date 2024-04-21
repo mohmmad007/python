@@ -24,6 +24,8 @@ urlpatterns=[
     path('edit_profile/', views.edit_profile, name='edit_profile'),
     path('suggestion/', views.suggestion, name='suggestion'),
     path('Verification_code/', views.Verification_code_view, name='Verification_code'),
-    # path('iamge/', views.upload_photo, name='upload_photo'),
+    path('iamge/', views.upload_photo, name='upload_photo'),
+    path('reset-password/', views.reset_password_view, name='reset_password'),
+    # path('iamge/', views.model_form_upload, name='upload_photo'),
 
 ]
